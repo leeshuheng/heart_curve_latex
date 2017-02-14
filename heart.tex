@@ -1,0 +1,20 @@
+%%% 2017年 02月 14日 星期二 14:20:07 CST
+
+\documentclass{standalone}
+
+\usepackage{pgfplots}
+
+\pgfplotsset{width=7cm,compat=newest}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\begin{axis}[domain=-1:1,samples=1000]
+		\addplot[mark=none,smooth,color=red]
+		{sqrt(1 - x^2)+(x^2)^(1/3)};
+		\addplot[mark=none,smooth,color=red]
+		{-sqrt(1 - x^2)+(x^2)^(1/3)};
+	\end{axis}
+\end{tikzpicture}
+
+\end{document}
